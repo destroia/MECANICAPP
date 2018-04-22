@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MECANICAPP.Views.LoginPage1"
+    NavigationPage.HasNavigationBar="False"
+    BindingContext="{Binding Main,Source={StaticResource Locator}}"
+    >
+    <ContentPage.Content>
+
+        <ScrollView
+            NavigationPage.HasNavigationBar="False"
+            BindingContext="{Binding Login,Mode=TwoWay}">
+
+            <StackLayout BackgroundColor="White" Padding="20,10">
+                <Label Text="MECANIC APP"
+                    FontSize="30"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0,40,0,0">
+                </Label>
+                <Label
+                    Text="E-Mail"
+                    TextColor="Black"
+                    Margin="0,30,0,0"
+                    HorizontalOptions="Start">
+                </Label>
+                <Entry
+                    Keyboard="Email"
+                    TextColor="Black"
+                    Placeholder="ingrese su E-mail..."
+                    Text="{Binding Email, Mode=TwoWay}"
+                    >
+                </Entry>
+                <Label
+                    Text="Contraseña"
+                    TextColor="Black"
+                    Margin="0,30,0,0"
+                    HorizontalOptions="Start">
+                </Label>
+                <Entry
+                    IsPassword="True"
+                    TextColor="Black"
+                    Placeholder="ingrese su contraseña..."
+                    Text="{Binding Password,Mode=TwoWay}"
+                    >
+
+                </Entry>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning,Mode=TwoWay}">
+                    
+                </ActivityIndicator>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>                  
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        TextColor="Black"
+                        Text="Recordarme"
+                        VerticalOptions="Center"
+                        HorizontalOptions="StartAndExpand">
+                    </Label>
+                    <Switch
+                        IsToggled="{Binding IsRemeber,Mode=TwoWay}"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                         >
+                    </Switch>
+                </Grid>
+
+                <Label
+                    HorizontalOptions="Center"
+                    TextColor="CadetBlue"
+                    Text="Olvidaste la contraseña?"
+                    Margin="0,15,0,0"
+                    >
+                </Label>
+                <Grid Margin="0,30,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        TextColor="White"
+                        Text="iniciar sesion"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="Black"
+                        BorderRadius="25"
+                        Command="{Binding LoginCMD,Mode=TwoWay}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                 
+                        >
+
+                    </Button>
+                    <Button
+                    
+                        TextColor="White"
+                        Text="Registrar"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BackgroundColor="Black"
+                        BorderRadius="25"
+                        Command="{Binding RegistarCMD,Mode=TwoWay}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                        >
+                    </Button>
+                </Grid>
+
+
+            </StackLayout>
+            
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

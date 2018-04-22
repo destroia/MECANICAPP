@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MECANICAPP.Views.RegisterPage1"
+             NavigationPage.HasNavigationBar="False"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView 
+                BindingContext="{Binding Register,Mode=TwoWay}">
+            <StackLayout 
+                Padding="30,0,10,10"
+                BackgroundColor="White">
+            
+
+
+                <Label
+                    Margin="0,30,0,0"
+                    Text="Registro"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    FontSize="30" >
+                </Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        FontAttributes="Bold"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Nombre"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="ingrese el nombre"
+                         FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterNombre,Mode=TwoWay}">
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Apellido"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="ingrese el apellido"
+                         FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterApellido,Mode=TwoWay}">
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Direccion"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Placeholder="ingrese la direccion"
+                         FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterDireccion,Mode=TwoWay}">
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="Telefono"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Placeholder="ingrese el telefono"
+                         FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterTelefono,Mode=TwoWay}">
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="E-mail"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Placeholder="ingrese el E-mail"
+                         FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterEmail,Mode=TwoWay}">
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Text="Empresa"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        >
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Placeholder="ingrese el nombre de su empresa"
+                        FontSize="Micro"
+                        VerticalOptions="EndAndExpand"
+                        Text="{Binding RegisterEmpresa,Mode=TwoWay}"
+                        >
+                    </Entry>
+
+                </Grid>
+
+                <Button
+                    HorizontalOptions="Center"
+                    WidthRequest="400"
+                    BackgroundColor="Black"
+                    VerticalOptions="CenterAndExpand"
+                    BorderRadius="400"
+                     Text="Registrar"
+                    TextColor="White"
+                    Command="{Binding RegisterCMD,Mode=TwoWay}"
+                   >
+                    
+                </Button>
+               
+               
+             </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MECANICAPP.Views.EscogerPage"
+             NavigationPage.HasNavigationBar="False"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content >
+        <ScrollView
+            BindingContext="{Binding Escoger,Mode=TwoWay}"
+            >
+            <StackLayout Padding="10" BackgroundColor="White" >
+                <Label Text="Bienvenido"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="Black">
+                
+                </Label>
+                <Label 
+                    Text="Escoge que tipo de usuario quieres ser."
+                    Margin="10"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand">
+                </Label>
+                <Image Source="Empresa.png"
+                       Margin="0,10,0,0" 
+                       WidthRequest="150"
+                       BindingContext="{Binding EmpresasCMD,Mode=TwoWay}">
+                </Image>
+                <Label Text="Empresas" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       BindingContext="{Binding EmpresasCMD,Mode=TwoWay}">
+                </Label>
+                <Image Source="personas.png"
+                       Margin="0,0,0,0"
+                       WidthRequest="150"
+                       BindingContext="{Binding PersonasCMD,Mode=TwoWay}">
+                    
+                </Image>
+                <Label Text="Personas naturales" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       BindingContext="{Binding PersonasCMD,Mode=TwoWay}">
+                </Label>
+                <Image Source="Maquina.png"
+                       Margin="0,10,0,0"
+                       WidthRequest="150"
+                       BindingContext="{Binding MaquinaCMD,Mode=TwoWay}"></Image>
+                <Label Text="Tecnico" 
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       BindingContext="{Binding MaquinaCMD,Mode=TwoWay}">
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
