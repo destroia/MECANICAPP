@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
+using MECANICAPP.Servicios;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -14,11 +15,21 @@ namespace MECANICAPP.ViewModels
     {
         public RegisterViewModel()
         {
+            dialogoServices =new  DialogoServices();
             this.registerNombre = "david stiven";
         }
+        #region Servicios
+        DialogoServices dialogoServices;
+        #endregion
         #region atributos
         #region variables
         private string registerNombre;
+        private string registerApellido;
+        private string registerDireccion;
+        private string registerEmail;
+        private string registerEmpresa;
+        private int    registerTelefono;
+
         #endregion
         public string RegisterNombre
         {
@@ -27,23 +38,28 @@ namespace MECANICAPP.ViewModels
         }
         public string RegisterApellido
         {
-            get;
+            get { return registerApellido; }
+            set { SetValue(ref registerApellido, value); }
         }
         public string RegisterDireccion
         {
-            get;
+            get { return registerDireccion; }
+            set { SetValue(ref registerDireccion, value); }
         }
         public int RegisterTelefono
         {
-            get;
+            get { return registerTelefono; }
+            set { SetValue(ref registerTelefono, value); }
         }
         public string RegisterEmail
         {
-            get;
+            get { return registerEmail; }
+            set { SetValue(ref registerEmail, value); }
         }
         public string RegisterEmpresa
         {
-            get;
+            get { return registerEmpresa; }
+            set { SetValue(ref registerEmpresa, value); }
         }
 
         #endregion
@@ -59,32 +75,32 @@ namespace MECANICAPP.ViewModels
         {
             if (string.IsNullOrEmpty(this.RegisterNombre))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu nombre", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu nombre");
                 return;
             }
             if (string.IsNullOrEmpty(this.RegisterApellido))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu apellido", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu apellido");
                 return;
             }
             if (string.IsNullOrEmpty(this.RegisterDireccion))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu apellido", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu apellido");
                 return;
             }
             if (this.RegisterTelefono == 0)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu telefono", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu telefono");
                 return;
             }
             if (string.IsNullOrEmpty(this.RegisterEmail))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu E-mail", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu E-mail");
                 return;
             }
             if (string.IsNullOrEmpty(this.RegisterEmpresa))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu empresa", "Aceptar");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu empresa");
                 return;
             }
 
