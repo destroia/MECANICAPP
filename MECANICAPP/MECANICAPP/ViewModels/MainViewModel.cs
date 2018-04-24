@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using MECANICAPP.ViewModels.EmpresaViewModel;
+using MECANICAPP.ViewModels.MecanicoViewModel;
 
 namespace MECANICAPP.ViewModels
 {
@@ -25,7 +26,13 @@ namespace MECANICAPP.ViewModels
             get;
             set;
         }
-        public EmpresaInicioViewModel EmpresaInicio {
+        public EmpresaInicioViewModel EmpresaInicio
+        {
+            get;
+            set;
+        }
+        public MecanicoInicioViewModel MecanicoInicio
+        {
             get;
             set;
         }

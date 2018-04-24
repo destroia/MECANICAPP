@@ -43,6 +43,7 @@
                         Placeholder="ingrese el nombre"
                          FontSize="Micro"
                         VerticalOptions="EndAndExpand"
+                        Keyboard="Text"
                         Text="{Binding RegisterNombre,Mode=TwoWay}">
                     </Entry>
                     <Label
@@ -62,6 +63,7 @@
                         Placeholder="ingrese el apellido"
                          FontSize="Micro"
                         VerticalOptions="EndAndExpand"
+                        Keyboard="Text"
                         Text="{Binding RegisterApellido,Mode=TwoWay}">
                     </Entry>
                     <Label
@@ -80,6 +82,7 @@
                         Grid.Column="1"
                         Placeholder="ingrese la direccion"
                          FontSize="Micro"
+                        Keyboard="Text"
                         VerticalOptions="EndAndExpand"
                         Text="{Binding RegisterDireccion,Mode=TwoWay}">
                     </Entry>
