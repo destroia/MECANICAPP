@@ -4,8 +4,11 @@
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
              x:Class="MECANICAPP.Views.EmpresaView.EmpresaInicioPage"
              Title="Inicio">
-   
-  
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="editar.png"></ToolbarItem>
+        <ToolbarItem Icon="addAnadir.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
    
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding EmpresaInicio,Mode=TwoWay}">
