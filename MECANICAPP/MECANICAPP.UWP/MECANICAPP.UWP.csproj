@@ -104,6 +104,8 @@
     <None Include="MECANICAPP.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\addAnadir.png" />
+    <Content Include="Assets\editar.png" />
     <Content Include="Assets\Empresa.png" />
     <Content Include="Assets\Maquina.png" />
     <Content Include="Assets\personas.png" />

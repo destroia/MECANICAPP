@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MECANICAPP.ViewModels.EmpresaViewModel;
 
 namespace MECANICAPP.ViewModels
 {
@@ -24,6 +25,12 @@ namespace MECANICAPP.ViewModels
             get;
             set;
         }
+        public EmpresaInicioViewModel EmpresaInicio {
+            get;
+            set;
+        }
+
+
         #region contructor
         public MainViewModel()
         {

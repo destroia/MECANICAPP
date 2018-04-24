@@ -143,4 +143,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\Maquina.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Empresa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%403x.png" />
+  </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@ using System.Windows.Input;
 using MECANICAPP.Servicios;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using MECANICAPP.ViewModels.EmpresaViewModel;
 
 namespace MECANICAPP.ViewModels
 {
@@ -17,18 +18,21 @@ namespace MECANICAPP.ViewModels
         {
             dialogoServices =new  DialogoServices();
             this.registerNombre = "david stiven";
+           
+
         }
         #region Servicios
         DialogoServices dialogoServices;
         #endregion
         #region atributos
         #region variables
+        
         private string registerNombre;
         private string registerApellido;
         private string registerDireccion;
         private string registerEmail;
         private string registerEmpresa;
-        private int    registerTelefono;
+        private string registerTelefono;
 
         #endregion
         public string RegisterNombre
@@ -46,7 +50,7 @@ namespace MECANICAPP.ViewModels
             get { return registerDireccion; }
             set { SetValue(ref registerDireccion, value); }
         }
-        public int RegisterTelefono
+        public string  RegisterTelefono
         {
             get { return registerTelefono; }
             set { SetValue(ref registerTelefono, value); }
@@ -85,10 +89,10 @@ namespace MECANICAPP.ViewModels
             }
             if (string.IsNullOrEmpty(this.RegisterDireccion))
             {
-                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu apellido");
+                await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu direccion");
                 return;
             }
-            if (this.RegisterTelefono == 0)
+            if (string.IsNullOrEmpty(this.RegisterTelefono))
             {
                 await dialogoServices.ShowMensaje("Error", "Tienes que ingresar tu telefono");
                 return;
@@ -110,6 +114,11 @@ namespace MECANICAPP.ViewModels
 
 
 
+        }
+
+        public static implicit operator RegisterViewModel(EmpresaInicioViewModel v)
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

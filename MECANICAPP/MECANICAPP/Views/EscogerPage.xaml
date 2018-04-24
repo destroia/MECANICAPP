@@ -22,39 +22,53 @@
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand">
                 </Label>
-                <Image Source="Empresa.png"
-                       Margin="0,10,0,0" 
-                       WidthRequest="150"
+               
+                <Image Source="Empresa.png" 
+                       Scale="0.7"
                        BindingContext="{Binding EmpresasCMD,Mode=TwoWay}">
                 </Image>
-                <Label Text="Empresas" 
-                       TextColor="Black"
+                <Button Text="Empresas" 
+                       TextColor="White"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
-                       BindingContext="{Binding EmpresasCMD,Mode=TwoWay}">
-                </Label>
+                       Command="{Binding EmpresasCMD,Mode=TwoWay}"
+                       BackgroundColor="Black"
+                        BorderRadius="25"
+                        WidthRequest="200"
+                        HeightRequest="40"
+                        >
+                </Button>
+                
                 <Image Source="personas.png"
                        Margin="0,0,0,0"
                        WidthRequest="150"
                        BindingContext="{Binding PersonasCMD,Mode=TwoWay}">
                     
                 </Image>
-                <Label Text="Personas naturales" 
-                       TextColor="Black"
+                <Button Text="Personas naturales" 
+                       TextColor="White"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
-                       BindingContext="{Binding PersonasCMD,Mode=TwoWay}">
-                </Label>
+                       Command="{Binding PersonasCMD,Mode=TwoWay}"
+                       BackgroundColor="Black"
+                       WidthRequest="200"
+                       HeightRequest="40"
+                       BorderRadius="25">
+                </Button>
                 <Image Source="Maquina.png"
-                       Margin="0,10,0,0"
+                       Margin="0,0,0,0"
                        WidthRequest="150"
                        BindingContext="{Binding MaquinaCMD,Mode=TwoWay}"></Image>
-                <Label Text="Tecnico" 
-                       TextColor="Black"
+                <Button Text="Tecnico" 
+                       TextColor="White"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
-                       BindingContext="{Binding MaquinaCMD,Mode=TwoWay}">
-                </Label>
+                       Command="{Binding MaquinaCMD,Mode=TwoWay}"
+                       BackgroundColor="Black"
+                       WidthRequest="200"
+                       HeightRequest="40"
+                       BorderRadius="25">
+                </Button>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
