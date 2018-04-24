@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MECANICAPP.Views
+namespace MECANICAPP.Views.EmpresaView
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class InicioEmpresaPage1 : ContentPage
+	public partial class EmpresaMenuViewPage : ContentPage
 	{
-		public InicioEmpresaPage1 ()
+		public EmpresaMenuViewPage ()
 		{
 			InitializeComponent ();
 		}

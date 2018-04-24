@@ -3,20 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MECANICAPP.Views.RegisterPage1"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Blanco}"
              BindingContext="{Binding Main,Source={StaticResource Locator}}">
     <ContentPage.Content>
         <ScrollView 
                 BindingContext="{Binding Register,Mode=TwoWay}">
             <StackLayout 
-                Padding="30,0,10,10"
-                BackgroundColor="White">
+                Padding="30,0,10,0"
+               >
             
 
 
                 <Label
                     Margin="0,30,0,0"
                     Text="Registro"
-                    TextColor="Black"
+                    TextColor="{StaticResource Oscuro}"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
                     FontSize="30" >
@@ -24,14 +25,14 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.3*" ></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label
                         FontAttributes="Bold"
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Nombre"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center">
 
@@ -42,7 +43,7 @@
                         Grid.Column="1"
                         Placeholder="ingrese el nombre"
                          FontSize="Micro"
-                        VerticalOptions="EndAndExpand"
+                        VerticalOptions="Center"
                         Keyboard="Text"
                         Text="{Binding RegisterNombre,Mode=TwoWay}">
                     </Entry>
@@ -51,7 +52,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Text="Apellido"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center">
 
@@ -62,7 +63,7 @@
                         Grid.Column="1"
                         Placeholder="ingrese el apellido"
                          FontSize="Micro"
-                        VerticalOptions="EndAndExpand"
+                        VerticalOptions="Center"
                         Keyboard="Text"
                         Text="{Binding RegisterApellido,Mode=TwoWay}">
                     </Entry>
@@ -71,7 +72,7 @@
                         Grid.Row="2"
                         Grid.Column="0"
                         Text="Direccion"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center">
 
@@ -83,7 +84,7 @@
                         Placeholder="ingrese la direccion"
                          FontSize="Micro"
                         Keyboard="Text"
-                        VerticalOptions="EndAndExpand"
+                        VerticalOptions="Center"
                         Text="{Binding RegisterDireccion,Mode=TwoWay}">
                     </Entry>
                     <Label
@@ -91,7 +92,7 @@
                         Grid.Row="3"
                         Grid.Column="0"
                         Text="Telefono"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center">
 
@@ -100,9 +101,10 @@
                          FontAttributes="Italic"
                         Grid.Row="3"
                         Grid.Column="1"
+                        Keyboard="Numeric"
                         Placeholder="ingrese el telefono"
                          FontSize="Micro"
-                        VerticalOptions="EndAndExpand"
+                        VerticalOptions="Center"
                         Text="{Binding RegisterTelefono,Mode=TwoWay}">
                     </Entry>
                     <Label
@@ -110,7 +112,7 @@
                         Grid.Row="4"
                         Grid.Column="0"
                         Text="E-mail"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center">
 
@@ -121,7 +123,8 @@
                         Grid.Column="1"
                         Placeholder="ingrese el E-mail"
                          FontSize="Micro"
-                        VerticalOptions="EndAndExpand"
+                        Keyboard="Email"
+                        VerticalOptions="Center"
                         Text="{Binding RegisterEmail,Mode=TwoWay}">
                     </Entry>
                     <Label
@@ -129,7 +132,7 @@
                         Grid.Row="5"
                         Grid.Column="0"
                         Text="Empresa"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"
                         >
@@ -141,8 +144,55 @@
                         Grid.Column="1"
                         Placeholder="ingrese el nombre de su empresa"
                         FontSize="Micro"
-                        VerticalOptions="EndAndExpand"
+                        Keyboard="Text"
+                        VerticalOptions="Center"
                         Text="{Binding RegisterEmpresa,Mode=TwoWay}"
+                        >
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Text="Contraseña"
+                        TextColor="{StaticResource Oscuro}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        >
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Placeholder="ingrese la contraseña"
+                        FontSize="Micro"
+                        Keyboard="Text"
+                        IsPassword="True"
+                        VerticalOptions="Center"
+                        Text="{Binding RegisterPassword,Mode=TwoWay}"
+                        >
+                    </Entry>
+                    <Label
+                         FontAttributes="Bold"
+                        Grid.Row="7"
+                        Grid.Column="0"
+                        Text="Confirmacion de contraseña"
+                        TextColor="{StaticResource Oscuro}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="CenterAndExpand"
+                        >
+
+                    </Label>
+                    <Entry
+                         FontAttributes="Italic"
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Placeholder="Confirme su contraseña"
+                        FontSize="Micro"
+                        Keyboard="Text"
+                        IsPassword="True"
+                        VerticalOptions="Center"
+                        Text="{Binding RegisterConfirmacioContraseña,Mode=TwoWay}"
                         >
                     </Entry>
 
@@ -151,12 +201,13 @@
                 <Button
                     HorizontalOptions="Center"
                     WidthRequest="400"
-                    BackgroundColor="Black"
+                     BackgroundColor="{StaticResource Naranja}"
                     VerticalOptions="CenterAndExpand"
                     BorderRadius="400"
                      Text="Registrar"
-                    TextColor="White"
+                    TextColor="{StaticResource Blanco}"
                     Command="{Binding RegisterCMD,Mode=TwoWay}"
+                    Margin="0,0,0,30"
                    >
                     
                 </Button>

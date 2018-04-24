@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MECANICAPP.Views.LoginPage1"
     NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{StaticResource Blanco}"
     BindingContext="{Binding Main,Source={StaticResource Locator}}"
     >
     <ContentPage.Content>
@@ -12,12 +13,12 @@
             NavigationPage.HasNavigationBar="False"
             BindingContext="{Binding Login,Mode=TwoWay}">
 
-            <StackLayout BackgroundColor="White" Padding="20,10">
+            <StackLayout Padding="20,10">
                 <Label Text="MECANIC APP"
                     FontSize="30"
                     HorizontalOptions="CenterAndExpand"
                     FontAttributes="Bold"
-                       TextColor="Black"
+                       TextColor="{StaticResource Oscuro}"
                        Margin="0,40,0,0">
                 </Label>
                 <Label
@@ -28,7 +29,7 @@
                 </Label>
                 <Entry
                     Keyboard="Email"
-                    TextColor="Black"
+                    TextColor="{StaticResource Oscuro}"
                     Placeholder="ingrese su E-mail..."
                     Text="{Binding Email, Mode=TwoWay}"
                     >
@@ -41,7 +42,7 @@
                 </Label>
                 <Entry
                     IsPassword="True"
-                    TextColor="Black"
+                    TextColor="{StaticResource Oscuro}"
                     Placeholder="ingrese su contraseña..."
                     Text="{Binding Password,Mode=TwoWay}"
                     >
@@ -59,7 +60,7 @@
                     <Label
                         Grid.Row="0"
                         Grid.Column="0"
-                        TextColor="Black"
+                        TextColor="{StaticResource Oscuro}"
                         Text="Recordarme"
                         VerticalOptions="Center"
                         HorizontalOptions="StartAndExpand">
@@ -74,7 +75,7 @@
 
                 <Label
                     HorizontalOptions="Center"
-                    TextColor="CadetBlue"
+                    TextColor="{StaticResource AzulClaro}"
                     Text="Olvidaste la contraseña?"
                     Margin="0,15,0,0"
                     >
@@ -86,11 +87,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Button
-                        TextColor="White"
+                        TextColor="{StaticResource Blanco}"
                         Text="iniciar sesion"
                         Grid.Row="0"
                         Grid.Column="0"
-                        BackgroundColor="Black"
+                         BackgroundColor="{StaticResource Naranja}"
                         BorderRadius="25"
                         Command="{Binding LoginCMD,Mode=TwoWay}"
                         IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
@@ -100,11 +101,11 @@
                     </Button>
                     <Button
                     
-                        TextColor="White"
+                        TextColor="{StaticResource Blanco}"
                         Text="Registrar"
                         Grid.Row="0"
                         Grid.Column="1"
-                        BackgroundColor="Black"
+                         BackgroundColor="{StaticResource Naranja}"
                         BorderRadius="25"
                         Command="{Binding RegistarCMD,Mode=TwoWay}"
                         IsEnabled="{Binding IsEnabled,Mode=TwoWay}"

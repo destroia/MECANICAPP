@@ -3,23 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MECANICAPP.Views.EscogerPage"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Blanco}"
              BindingContext="{Binding Main,Source={StaticResource Locator}}">
     <ContentPage.Content >
         <ScrollView
             BindingContext="{Binding Escoger,Mode=TwoWay}"
             >
-            <StackLayout Padding="10" BackgroundColor="White" >
+            <StackLayout Padding="10"  >
                 <Label Text="Bienvenido"
                        HorizontalOptions="CenterAndExpand"
                        FontSize="30"
                        FontAttributes="Bold"
-                       TextColor="Black">
+                       TextColor="{StaticResource Oscuro}">
                 
                 </Label>
                 <Label 
                     Text="Escoge que tipo de usuario quieres ser."
                     Margin="10"
-                    TextColor="Black"
+                    TextColor="{StaticResource Oscuro}"
                     HorizontalOptions="CenterAndExpand">
                 </Label>
                
@@ -28,11 +29,11 @@
                        BindingContext="{Binding EmpresasCMD,Mode=TwoWay}">
                 </Image>
                 <Button Text="Empresas" 
-                       TextColor="White"
+                       TextColor="{StaticResource Blanco}"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        Command="{Binding EmpresasCMD,Mode=TwoWay}"
-                       BackgroundColor="Black"
+                        BackgroundColor="{StaticResource Naranja}"
                         BorderRadius="25"
                         WidthRequest="200"
                         HeightRequest="40"
@@ -46,11 +47,11 @@
                     
                 </Image>
                 <Button Text="Personas naturales" 
-                       TextColor="White"
+                       TextColor="{StaticResource Blanco}"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        Command="{Binding PersonasCMD,Mode=TwoWay}"
-                       BackgroundColor="Black"
+                        BackgroundColor="{StaticResource Naranja}"
                        WidthRequest="200"
                        HeightRequest="40"
                        BorderRadius="25">
@@ -60,11 +61,11 @@
                        WidthRequest="150"
                        BindingContext="{Binding MaquinaCMD,Mode=TwoWay}"></Image>
                 <Button Text="Tecnico" 
-                       TextColor="White"
+                       TextColor="{StaticResource Blanco}"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        Command="{Binding MaquinaCMD,Mode=TwoWay}"
-                       BackgroundColor="Black"
+                        BackgroundColor="{StaticResource Naranja}"
                        WidthRequest="200"
                        HeightRequest="40"
                        BorderRadius="25">

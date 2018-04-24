@@ -11,6 +11,14 @@
             <infra:InstanceLocator 
                 x:Key="Locator"> 
             </infra:InstanceLocator>
+            
+            <!--Colores-->
+            <Color x:Key="Azul">#03396C</Color>
+            <Color x:Key="AzulClaro">#005B96</Color>
+            <Color x:Key="Oscuro">#20202</Color>
+            <Color x:Key="Blanco">#F9F9F9</Color>
+            <Color x:Key="Naranja">#E83E00</Color>
+            <Color x:Key="Botones">#52343B</Color>
 
         </ResourceDictionary>
     </Application.Resources>
