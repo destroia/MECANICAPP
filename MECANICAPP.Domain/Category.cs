@@ -12,9 +12,13 @@ namespace MECANICAPP.Domain
     {
         [Key]
         public int CategoryId { get; set; }
-     //  [Required(ErrorMessage ="Este campo {0} es requerido")]
-       //[MaxLength(15,ErrorMessage ="Este campo {0} requiere minimo {1} caracteres")]
-      // [Index("Category_Descripcion_Index",IsUnique =true)]
+
+         [Required(ErrorMessage ="Este campo {0} es requerido")]      
+         [MaxLength(15,ErrorMessage ="Este campo {0} requiere minimo {1} caracteres")]
+         [Index("Category_Descripcion_Index",IsUnique =true)]
         public string Descripcion { get; set; }
+
+
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

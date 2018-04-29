@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Mantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
