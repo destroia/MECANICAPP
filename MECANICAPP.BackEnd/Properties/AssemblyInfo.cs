@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante lo siguiente
 // conjunto de atributos. Cambie los valores de estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("MECANICAPP.API")]
+[assembly: AssemblyTitle("MECANICAPP.BackEnd")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MECANICAPP.API")]
+[assembly: AssemblyProduct("MECANICAPP.BackEnd")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como ID de typelib si este proyecto se expone a COM
-[assembly: Guid("5303cdc8-74b7-4161-b40e-f477ce31c5c5")]
+[assembly: Guid("37f03c21-9452-4922-9b52-0b9dc9ce6c87")]
 
 // La información de versión de un ensamblado consta de los siguientes cuatro valores:
 //
