@@ -9,8 +9,11 @@ namespace MECANICAPP
 {
     using Xamarin.Forms;
     using Views;
-	public partial class App : Application
+    using Views.EmpresaView;
+    public partial class App : Application
 	{
+      
+
         #region Contructores
         public App ()
 		{

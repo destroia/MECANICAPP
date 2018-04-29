@@ -6,7 +6,7 @@ using MECANICAPP.ViewModels.MecanicoViewModel;
 
 namespace MECANICAPP.ViewModels
 {
-    
+
     public class MainViewModel
     {
         #region ViewModel
@@ -36,7 +36,8 @@ namespace MECANICAPP.ViewModels
             get;
             set;
         }
-
+        
+          
 
         #region contructor
         public MainViewModel()
