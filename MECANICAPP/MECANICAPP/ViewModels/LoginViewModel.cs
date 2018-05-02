@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using MECANICAPP.Servicios;
 using MECANICAPP.Views;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using MECANICAPP.ViewModels;
+using MECANICAPP.Models;
 
 namespace MECANICAPP.ViewModels
 {
@@ -16,14 +19,20 @@ namespace MECANICAPP.ViewModels
 
         public LoginViewModel()
         {
+            dialogoSerices = new DialogoServices();
+            apiServicio = new ApiServicio();
             this.IsEnabled = true;
             this.IsRunning = false;
             this.IsRemeber = true;
-            this.Email = "david";
-            this.password = "1234";
+            this.Email = "da@gmail.com";
+            this.password = "123456";
 
         }
 
+        #region Servicios
+        DialogoServices dialogoSerices;
+        ApiServicio apiServicio;
+        #endregion
         #region Atributos
         private string email;
         private string password;
@@ -80,22 +89,41 @@ namespace MECANICAPP.ViewModels
         {
             if (string.IsNullOrEmpty(this.Email))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu E-mail", "Aceptar");
+                await dialogoSerices.ShowMensaje("Error", "Tienes que ingresar tu E-mail");
                 return;
             }
             if (string.IsNullOrEmpty(this.Password))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Tienes que ingresar tu contraseña", "Aceptar");
+                await dialogoSerices.ShowMensaje("Error", "Tienes que ingresar tu contraseña");
                 return;
             }
-            if (this.Email != "david" && this.Password != "1234")
+            IsRunning = true;
+            IsEnabled = false;
+            var connection = await apiServicio.CheckConnection();
+            if (!connection.IsSuccess)
             {
-                this.Password = string.Empty;
-
+                IsEnabled = true;
+                IsEnabled = false;
+                await dialogoSerices.ShowMensaje("Error", connection.Message);
+                return;
             }
-            MainViewModel.Getinstancia().Escoger = new EscogerViewModel();
+
+            var Responce = await apiServicio.GetToken("http://mecanicappapi.azurewebsites.net", Email, Password);
+            if (Responce == null || string.IsNullOrEmpty(Responce.Access_token))
+            {
+                IsEnabled = true;
+                IsRunning = false;
+                await dialogoSerices.ShowMensaje("Error", Responce.ErrorDescription);
+                return;
+            }
+            var mainViewModel = MainViewModel.Getinstancia();
+            mainViewModel.Token = Responce;
+
+           // await dialogoSerices.ShowMensaje("taran", "Bienvenido");
+             MainViewModel.Getinstancia().Escoger = new EscogerViewModel();
+           
             await Application.Current.MainPage.Navigation.PushAsync(new EscogerPage());
-            // return;
+             return;
         }
 
         public ICommand RegistarCMD

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -44,7 +45,7 @@ namespace MECANICAPP.Domain
         //[Index("Items_Descripcion_Index",IsUnique = true)]
         public string Descripcion { get; set; }
 
-
+        [JsonIgnore]
         public virtual Category Category { get; set; }
     }
 }

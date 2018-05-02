@@ -12,6 +12,7 @@ using MECANICAPP.Domain;
 
 namespace MECANICAPP.BackEnd.Controllers
 {
+    [Authorize]
     public class ItemsController : Controller
     {
         private DataContextLocal db = new DataContextLocal();

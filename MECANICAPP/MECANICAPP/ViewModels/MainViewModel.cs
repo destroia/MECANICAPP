@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MECANICAPP.ViewModels.EmpresaViewModel;
 using MECANICAPP.ViewModels.MecanicoViewModel;
+using MECANICAPP.Models;
 
 namespace MECANICAPP.ViewModels
 {
@@ -45,7 +46,15 @@ namespace MECANICAPP.ViewModels
             instacia = this;
             this.Login = new LoginViewModel();
         }
-        
+
+        #endregion
+        #region Token
+        public TokenResponse Token
+        {
+            get;
+            set;
+
+        }
         #endregion
         #region singleton
         private static MainViewModel instacia;
@@ -56,6 +65,11 @@ namespace MECANICAPP.ViewModels
                 return new MainViewModel();
             }
             return instacia;
+        }
+
+        internal static object GetInstace()
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

@@ -12,8 +12,10 @@ using MECANICAPP.Domain;
 
 namespace MECANICAPP.BackEnd.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
+        
         private DataContextLocal db = new DataContextLocal();
 
         // GET: Categories
