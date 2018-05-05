@@ -9,19 +9,73 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using MECANICAPP.API.Models;
 using MECANICAPP.Domain;
 
 namespace MECANICAPP.API.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class CategoriesController : ApiController
     {
         private DataContext db = new DataContext();
 
         // GET: api/Categories
-        public IQueryable<Category> GetCategories()
+        public async Task <IHttpActionResult> GetCategories()
         {
-            return db.Categories;
+
+            var categoria = await db.Categories.ToListAsync();
+            var categoriaRespons = new List<CategoryRespons>();
+            foreach (var category in categoria)
+            {
+
+                var historiaRespons = new List<HistoriaRespons>();
+
+
+                var itemsRespons = new List<ItemRespons>();
+                foreach (var item in category.Items)
+                {
+                   
+                    foreach (var hist in item.Historias)
+                    {
+                        historiaRespons.Add(new HistoriaRespons
+                        {
+                            FechaIntervecion = hist.FechaIntervecion,
+                            Repuestos = hist.Repuestos,
+                            Historias = hist.Historias,
+                            Valor = hist.Valor,
+
+                        });
+                        // Valor= hist.Valor,
+                        //Repuestos = hist.Repuestos,
+                    }
+                    itemsRespons.Add(new ItemRespons
+                    {
+
+                        ItemsId = item.ItemsId,
+                        Descripcion = item.Descripcion,
+                        Codigo = item.Codigo,
+                        Marca = item.Marca,
+                        Medelo = item.Medelo,
+                        Serial = item.Serial,
+                        anoCompra = item.anoCompra,
+                        precio = item.precio,
+                        Ubicacion = item.Ubicacion,
+                        Historias =historiaRespons,
+                        
+                    });
+                }
+              
+                categoriaRespons.Add(new CategoryRespons
+                {
+                    CategoryId = category.CategoryId,
+                    Descripcion = category.Descripcion,
+                    Items = itemsRespons,
+
+                });
+            }
+            return Ok(categoriaRespons);
+
+          
         }
 
         // GET: api/Categories/5

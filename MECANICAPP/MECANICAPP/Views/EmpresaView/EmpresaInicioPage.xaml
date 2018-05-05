@@ -13,9 +13,10 @@
    
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding EmpresaInicio,Mode=TwoWay}">
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView 
+                ItemsSource="{Binding CategoryMaps}">
+            </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

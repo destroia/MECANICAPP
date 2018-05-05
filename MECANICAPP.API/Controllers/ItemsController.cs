@@ -13,7 +13,7 @@ using MECANICAPP.Domain;
 
 namespace MECANICAPP.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ItemsController : ApiController
     {
         private DataContext db = new DataContext();

@@ -1,0 +1,50 @@
+﻿@model MECANICAPP.Domain.Historia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Historia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaIntervecion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaIntervecion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Repuestos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repuestos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Historias }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

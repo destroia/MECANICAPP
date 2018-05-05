@@ -16,6 +16,7 @@ namespace MECANICAPP.Domain
        
         public int CategoryId { get; set; }
         
+        [Display(Name ="Codigo")]
         public string Codigo { get; set;  }
 
 
@@ -35,7 +36,7 @@ namespace MECANICAPP.Domain
         [Display(Name ="Precio de compra")]
         [DisplayFormat(DataFormatString ="{0:C2}",ApplyFormatInEditMode =false)]
         [Required]
-        public decimal precio { get; set; }
+        public double precio { get; set; }
 
         public string Ubicacion { get; set; }
         
@@ -47,5 +48,7 @@ namespace MECANICAPP.Domain
 
         [JsonIgnore]
         public virtual Category Category { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Historia> Historias { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MECANICAPP.Models
 {
-    public class Rosponse
+    public class Response
     {
         public bool  IsSuccess { get; set; }
         public string Message { get; set; }

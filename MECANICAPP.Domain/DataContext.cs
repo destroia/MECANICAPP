@@ -16,5 +16,7 @@ namespace MECANICAPP.Domain
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }
+
+        public System.Data.Entity.DbSet<MECANICAPP.Domain.Historia> Historias { get; set; }
     }
 }

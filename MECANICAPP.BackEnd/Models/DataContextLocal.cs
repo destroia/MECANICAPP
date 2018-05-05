@@ -8,6 +8,6 @@ namespace MECANICAPP.BackEnd.Models
 {
     public class DataContextLocal : DataContext
     {
-        
+        public System.Data.Entity.DbSet<MECANICAPP.Domain.Historia> Historias { get; set; }
     }
 }

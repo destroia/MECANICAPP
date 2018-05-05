@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="Historia.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Mantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
