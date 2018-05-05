@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MECANICAPP.Views.EmpresaView.ItemsPage"
              BackgroundColor="{StaticResource Blanco}"
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
-             x:Class="MECANICAPP.Views.EmpresaView.EmpresaInicioPage"
-             Title="Inicio">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="editar.png"></ToolbarItem>
-        <ToolbarItem Icon="addAnadir.png"></ToolbarItem>
-    </ContentPage.ToolbarItems>
-   
-    <ContentPage.Content >
+              Title="Items">
+    <ContentPage.Content>
         <StackLayout BindingContext="{Binding EmpresaInicio,Mode=TwoWay}"
                      Padding="10,5,5,10">
             <ListView HasUnevenRows="True"
@@ -50,7 +44,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

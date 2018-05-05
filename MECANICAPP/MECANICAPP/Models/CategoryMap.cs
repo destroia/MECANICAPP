@@ -1,6 +1,8 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace MECANICAPP.Models
 {
@@ -12,5 +14,19 @@ namespace MECANICAPP.Models
         {
             return Descripcion;
         }
+        #region Comandos
+        public ICommand SeleccionCategoryCommand {
+            get
+            {
+                return new RelayCommand(SeleccionCategory);
+            }
+            
+        }
+
+        void SeleccionCategory()
+        {
+            
+        }
+        #endregion
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MECANICAPP.ViewModels
+namespace MECANICAPP.ViewModels.EmpresaViewModel
 {
-    public class MenuViewModel
+    class ItemsViewModel
     {
     }
 }
