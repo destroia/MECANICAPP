@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MECANICAPP.Models
 {
-    class HistoriaMap
+    public class HistoriaMap
     {
         public DateTime FechaIntervecion { get; set; }
         public double Valor { get; set; }

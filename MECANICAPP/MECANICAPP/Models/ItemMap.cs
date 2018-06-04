@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MECANICAPP.Models
 {
-    class ItemMap
+    public class ItemMap
     {
         public int ItemsId { get; set; }
         public string Codigo { get; set; }

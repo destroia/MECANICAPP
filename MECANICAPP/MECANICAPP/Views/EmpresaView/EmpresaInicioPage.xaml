@@ -41,7 +41,7 @@
                                     Scale="1.2">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer
-                                            Command="SeleccionCategoryCommand"
+                                            Command="{Binding SeleccionCategoryCommand}"
                                        ></TapGestureRecognizer>
                                     </Image.GestureRecognizers>
                                 </Image>

@@ -167,4 +167,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\FlechaDerecha.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Item.png" />
+  </ItemGroup>
 </Project>

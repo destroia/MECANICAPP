@@ -10,7 +10,7 @@ using MECANICAPP.BackEnd.Models;
 
 namespace MECANICAPP.BackEnd.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

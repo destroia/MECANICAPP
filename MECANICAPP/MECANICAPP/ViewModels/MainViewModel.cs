@@ -10,6 +10,11 @@ namespace MECANICAPP.ViewModels
 
     public class MainViewModel
     {
+        public ItemsViewModel ItemsyMaps
+        {
+            get;
+            set;
+        }
         #region ViewModel
         public LoginViewModel Login
         {

@@ -12,7 +12,7 @@ using MECANICAPP.Domain;
 
 namespace MECANICAPP.BackEnd.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ItemsController : Controller
     {
         private DataContextLocal db = new DataContextLocal();

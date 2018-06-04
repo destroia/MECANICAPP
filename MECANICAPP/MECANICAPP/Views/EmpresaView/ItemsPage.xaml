@@ -6,10 +6,10 @@
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
               Title="Items">
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding EmpresaInicio,Mode=TwoWay}"
+        <StackLayout BindingContext="{Binding ItemsyMaps,Mode=TwoWay}"
                      Padding="10,5,5,10">
             <ListView HasUnevenRows="True"
-                ItemsSource="{Binding CategoryMaps}"
+                ItemsSource="{Binding aItemMaps}"
                       >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -19,26 +19,23 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
+                                <Image
+                                    Source="Item"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    Scale="1">
+                                   
+                                </Image>
                                 <Label
                                     Grid.Column="0"
                                     VerticalOptions="Center"
                                     FontAttributes="None"
                                     TextColor="Black"
                                     FontSize="Medium"
-                                    Text="{Binding Descripcion}"
+                                    Text="{Binding Codigo}"
                                     HorizontalOptions="FillAndExpand">
                                 </Label>
-                                <Image
-                                    Source="FlechaDerecha"
-                                    HorizontalOptions="End"
-                                    VerticalOptions="Center"
-                                    Scale="1.2">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
-                                            Command="SeleccionCategoryCommand"
-                                       ></TapGestureRecognizer>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
